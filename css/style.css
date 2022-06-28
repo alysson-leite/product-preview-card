@@ -1,97 +1,135 @@
 body {
-     display: grid;
-     grid-template-areas: "image info";
-     grid-template-columns: 1fr 1fr;
+
      font-family: 'Montserrat', sans-serif;
-     font-weight: 500;
+     font-size: 14px;
      max-width: 1440px;
+     background-color: hsl(30, 38%, 92%);
+
 }
 
-.desktop {
-     height: 100vh;
-}
-.mobile{
-     display: none;
+.container {
+     height: 450px;
+     width: 600px;
+     display: flex;
+     justify-content: center;
+     border-radius: 12px;
+     overflow: hidden;
+     background-color: hsl(0, 0%, 100%);
+
 }
 
-.info{
-     margin: 20px;
-     
+.image {
+     background: url('../images/image-product-desktop.jpg') no-repeat;
+     background-size: cover;
+     height: 100%;
+     width: 300px;
 }
 
-.info h4{
+.info {
+     height: 100%;
+     width: 300px;
+     margin-left: 25px;
+}
+
+.info h4 {
      text-transform: uppercase;
-     padding: 20px 0;
-     color: hsl(30, 10%, 76%);
+     margin: 20px 0;
+     color: hsl(228, 12%, 48%);
+     padding-right: 30px;
 }
 
-.info h1{
+.info h1 {
      font-family: 'Fraunces', serif;
      font-weight: 700;
-     font-size: 40px;
-     padding: 20px 0
+     font-size: 30px;
+     color: hsl(212, 21%, 14%);
+     margin: 20px 0;
+     padding-right: 30px;
 }
 
-.info p{
+.info p {
      font-size: 14px;
-     color: hsl(30, 10%, 76%);
+     color: hsl(228, 12%, 48%);
      line-height: 25px;
-     padding: 20px 0;
+     margin: 10px 0;
 }
 
-.info .price{
-     padding: 20px 0;
+.info .price {
+     margin: 10px 0;
      display: flex;
      align-items: center;
 }
 
-.info .price h1{
+.info .price h1 {
      font-family: 'Fraunces', serif;
      font-weight: 700;
      color: hsl(158, 36%, 37%);
-     font-size: 40px;
+     font-size: 25px;
 }
 
-.info .price h5{
+.info .price h5 {
      text-decoration: line-through;
-     color: hsl(30, 10%, 76%);
-     padding-left: 40px;
+     color: hsl(228, 12%, 48%);
+     margin-left: 20px;
 }
 
-.info .cart a{
+.info .cart a {
      background-color: hsl(158, 36%, 37%);
      color: hsl(0, 0%, 100%);
-     border-radius: 30px;
+     width: 240px;
+     height: 50px;
+     margin: 20px 0;
+     border-radius: 20px;
      gap: 10px;
      font-weight: 700;
      display: flex;
+     flex-direction: row;
      justify-content: center;
-     padding: 20px;
-     margin-top: 10px;
+     align-items: center;
      transition: 0.3s;
 }
 
-.info .cart a:hover{
+.info .cart a:hover {
      background-color: hsl(212, 21%, 14%);
 }
 
 .info .attribution {
      font-size: 10px;
-     padding-top: 50px;
-     
+     text-align: center;
+
+
 }
 
-@media (max-width: 425px){
-     body{
+@media (max-width: 425px) {
+
+     .container {
+          height: 615px;
+          width: 350px;
           display: flex;
           flex-direction: column;
+          justify-content: center;
      }
 
-     .desktop{
-          display: none;
+     .image {
+          background: url(../images/image-product-mobile.jpg);
+          background-size: cover;
+          height: 245px;
+          width: 100%;
+          margin-bottom: 18px;
      }
 
-     .mobile{
-          display: flex;
+     .info p {
+          font-size: 12px;
+          margin-bottom: 18px;
      }
+
+     .info .price {
+          margin-bottom: 18px;
+     }
+
+     .info .cart a {
+          width: 300px;
+     }
+
+
 }
