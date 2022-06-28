@@ -1,0 +1,97 @@
+body {
+     display: grid;
+     grid-template-areas: "image info";
+     grid-template-columns: 1fr 1fr;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 500;
+     max-width: 1440px;
+}
+
+.desktop {
+     height: 100vh;
+}
+.mobile{
+     display: none;
+}
+
+.info{
+     margin: 20px;
+     
+}
+
+.info h4{
+     text-transform: uppercase;
+     padding: 20px 0;
+     color: hsl(30, 10%, 76%);
+}
+
+.info h1{
+     font-family: 'Fraunces', serif;
+     font-weight: 700;
+     font-size: 40px;
+     padding: 20px 0
+}
+
+.info p{
+     font-size: 14px;
+     color: hsl(30, 10%, 76%);
+     line-height: 25px;
+     padding: 20px 0;
+}
+
+.info .price{
+     padding: 20px 0;
+     display: flex;
+     align-items: center;
+}
+
+.info .price h1{
+     font-family: 'Fraunces', serif;
+     font-weight: 700;
+     color: hsl(158, 36%, 37%);
+     font-size: 40px;
+}
+
+.info .price h5{
+     text-decoration: line-through;
+     color: hsl(30, 10%, 76%);
+     padding-left: 40px;
+}
+
+.info .cart a{
+     background-color: hsl(158, 36%, 37%);
+     color: hsl(0, 0%, 100%);
+     border-radius: 30px;
+     gap: 10px;
+     font-weight: 700;
+     display: flex;
+     justify-content: center;
+     padding: 20px;
+     margin-top: 10px;
+     transition: 0.3s;
+}
+
+.info .cart a:hover{
+     background-color: hsl(212, 21%, 14%);
+}
+
+.info .attribution {
+     font-size: 10px;
+     padding-top: 50px;
+     
+}
+
+@media (max-width: 425px){
+     body{
+          display: flex;
+          flex-direction: column;
+     }
+
+     .desktop{
+          display: none;
+     }
+
+     .mobile{
+          display: flex;
+     }
+}
